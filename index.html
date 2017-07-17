@@ -2,7 +2,7 @@
 <html>
   <head>
     <meta charset="utf-8">
-    <title>test</title>
+    <title>no-more-secrets.js</title>
     <link href="https://fonts.googleapis.com/css?family=Karla" rel="stylesheet">
   </head>
   <body>
@@ -61,23 +61,24 @@
     <main>
       <h1>no-more-secrets.js</h1>
       <article>
-        <p>An attempt at creating the decryption effect seen in the 1992 movie Sneakers, <strong>but with JavaScript</strong>. Inpired by <a href="https://github.com/bartobri/no-more-secrets"> this</a>.</p>
-        <p>How to start using it: <a>download the latest version</a>, add it to your project and call the exposed function <code>nms(element = document.body)</code>.</p>
-        <p>Optionally, you can pass as second argument a configuration object that is merged with the default values:
+        <p>An attempt at recreating the decryption effect shown in the 1992 movie Sneakers, <strong>but with JavaScript</strong>. Inpired by <a target="_blank" href="https://github.com/bartobri/no-more-secrets"> this</a>.</p>
+        <p>How to start: <a>download the latest version</a>, add it to your project and call the exposed function <code>nms(element, config)</code>. The target element defaults to body.</p>
+        <p>Optionally, you can pass as second argument a configuration object which will be merged with the default values:
           <pre>
 
   {
-    maxUpdateInterval: 200, // maximum update interval time (in milliseconds)
-    minUpdateInterval: 50, // minimum update interval time (in milliseconds)
-    maxUpdates: 20, // number of updates until decryption ends
-    extraDelay: 100 // small addition with .1 chance of happening to some characters
+    maxUpdateInterval: 100, // maximum update interval time
+    minUpdateInterval: 25,  // minimum update interval time
+    maxUpdates: 50,         // number of updates until character decryption ends
+    extraDelay: 50,         // small interval addition with .1 chance of happening
+    initialDelay: 100,      // delay before the decryption effect start
   }
 </pre>
         </p>
-        <p>Note: the effect will only work correctly with monospaced fonts; the more text nodes you have the more </p>
+        <p>Notes: the effect will only work correctly with <strong>monospaced fonts</strong>; the more text nodes you have the slower it becomes.</p>
       </article>
-      <script src="https://cdnjs.cloudflare.com/ajax/libs/ramda/0.24.1/ramda.min.js"></script>
-      <script src="index.js"></script>
+      <script src="no-more-secrets.js"></script>
+      <script>nms()</script>
     </main>
   </body>
 </html>
