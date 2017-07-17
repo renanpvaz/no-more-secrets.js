@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>test</title>
+    <link href="https://fonts.googleapis.com/css?family=Karla" rel="stylesheet">
+  </head>
+  <body>
+    <style media="screen">
+      html,
+      body,
+      main {
+        height: 100%;
+      }
+
+      body {
+        font-family: monospace;
+        background-color: #252735;
+        color: #8aeaf2;
+        font-size: 16px;
+        margin: 0;
+      }
+
+      main {
+        max-width: 760px;
+        margin: auto;
+        line-height: 1.4;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+      }
+
+      strong {
+        font-weight: bold;
+      }
+
+      a {
+        color: #5560ed;
+      }
+
+      pre,
+      code {
+        font-family: Courier, monospace;
+        padding: 0;
+        padding-top: 0.2em;
+        padding-bottom: 0.2em;
+        margin: 0;
+        font-size: 85%;
+        border-radius: 3px;
+        background-color: #1e1e1e;
+      }
+
+      pre::before,
+      pre::after,
+      code::before,
+      code::after {
+        letter-spacing: -0.2em;
+        content: '\00a0';
+      }
+    </style>
+    <main>
+      <h1>no-more-secrets.js</h1>
+      <article>
+        <p>An attempt at creating the decryption effect seen in the 1992 movie Sneakers, <strong>but with JavaScript</strong>. Inpired by <a href="https://github.com/bartobri/no-more-secrets"> this</a>.</p>
+        <p>How to start using it: <a>download the latest version</a>, add it to your project and call the exposed function <code>nms(element = document.body)</code>.</p>
+        <p>Optionally, you can pass as second argument a configuration object that is merged with the default values:
+          <pre>
+
+  {
+    maxUpdateInterval: 200, // maximum update interval time (in milliseconds)
+    minUpdateInterval: 50, // minimum update interval time (in milliseconds)
+    maxUpdates: 20, // number of updates until decryption ends
+    extraDelay: 100 // small addition with .1 chance of happening to some characters
+  }
+</pre>
+        </p>
+        <p>Note: the effect will only work correctly with monospaced fonts; the more text nodes you have the more </p>
+      </article>
+      <script src="https://cdnjs.cloudflare.com/ajax/libs/ramda/0.24.1/ramda.min.js"></script>
+      <script src="index.js"></script>
+    </main>
+  </body>
+</html>
