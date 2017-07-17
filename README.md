@@ -1,1 +1,1 @@
-#no-more-secrets.js
+# no-more-secrets.js
